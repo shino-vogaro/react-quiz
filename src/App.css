@@ -1,0 +1,228 @@
+/* .App-logo {
+  animation: spin infinite 20s linear;
+  height: 80px;
+} */
+
+.App-header {
+  background-color: #000;
+  /* padding: 13px; */
+  color: white;
+  text-align: center;
+  /* display: flex; */
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/* @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* .App-header h2 {
+  width: 74%;
+  text-align: left;
+} */
+
+
+/* logo */
+.bound-animation {
+  width: 26%;
+  min-height: 20px;
+  position: absolute;
+  top: 1%;
+  right: 20%;
+  bottom: 87%;
+}
+
+.timer-container--sub--01 {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.timer-container--sub--01 .bound-animation {
+  width: 26%;
+  min-height: 20px;
+  position: absolute;
+  top: 86%;
+  right: 68%;
+  bottom: 0%;
+}
+
+.timer-container--sub--01 .bound-animation .ball {
+  background: #2C7873;
+}
+
+.timer-container--sub--02 {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.timer-container--sub--02 .bound-animation {
+  width: 26%;
+  min-height: 20px;
+  position: absolute;
+  top: 43%;
+  right: 23%;
+  bottom: 42%;
+  width: 26%;
+  min-height: 20px;
+  position: absolute;
+  top: 54%;
+  right: 23%;
+  bottom: 35%;
+}
+
+.timer-container--sub--02 .bound-animation .ball {
+  background: #FFBB00;
+}
+
+.timer-container--sub--03 {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.timer-container--sub--03 .bound-animation {
+  width: 26%;
+  min-height: 20px;
+  position: absolute;
+  top: 14%;
+  right: 1%;
+  bottom: 67%;
+}
+
+.timer-container--sub--03 .bound-animation .ball {
+  background: #FB6542;
+}
+
+.bound-animation--rolling {
+  width: 26%;
+  min-height: 20px;
+  position: absolute;
+  top: 136px;
+  right: 20%;
+  bottom: 128px;
+  z-index: 1;
+}
+
+/*ボール*/
+.ball {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background: #4499da;
+  /*opacity: 0.6;
+  */animation: bound-anim 1s infinite;
+  -webkit-animation: bound-anim 1s infinite;
+}
+
+.ball span {
+  position: absolute;
+  top: 8px;
+  right: -57px;
+  left: 0;
+  display: flex;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: right;
+  justify-content: center;
+}
+
+@keyframes bound-anim {
+  0%,
+  100% {
+    top: 0;
+    transform: scale(1);
+  }
+  30% {
+    top: -60%;
+    transform: scale(0.96, 1.04);
+    -webkit-transform: scale(0.96, 1.04);
+    -moz-transform: scale(0.96, 1.04);
+    -ms-transform: scale(0.96, 1.04);
+    -o-transform: scale(0.96, 1.04);
+}
+  60% {
+    transform: scale(1);
+  }
+  90% {
+    top: 0;
+    transform: scale(1.15, 0.9);
+  }
+}
+
+/*影*/
+.shadow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -63px;
+  margin: auto;
+  width: 30px;
+  height: 8px;
+  border-radius: 50%;
+  background: #58535E;
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+  opacity: 0.9;
+  -webkit-animation: shadow-anim 1s infinite;
+  animation: shadow-anim 1s infinite;
+}
+
+@keyframes shadow-anim {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: blur(4px);
+  }
+  30% {
+    transform: scale(1.6, 1);
+    filter: blur(8px);
+  }
+}
+
+/* timer */
+.timer {
+  /* font-weight: 700;
+  font-size: 20px;
+  margin: 10px 0 10px -65px; */
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 0 -65px;
+  /* padding: 10px 0; */
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+
+.timer-text {
+  font-size: 23px;
+  margin: 10px 0 10px;
+}
+
+.is-active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: ease-in-out 0.3s;
+  -moz-transition: ease-in-out 0.3s;
+  -ms-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
